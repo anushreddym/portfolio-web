@@ -1,0 +1,242 @@
+:root {
+  --home-bg: #0A0A0A;
+  --home-surface: #0b0f14;
+  --home-surface-2: #0f1520;
+  --home-text: #e6edf3;
+  --home-muted: rgba(230, 237, 243, 0.64);
+  --home-accent: #58a6ff;
+  --home-border: rgba(230, 237, 243, 0.12);
+  --page-gutter: clamp(1rem, 4vw, 1.5rem);
+  --page-max: 36rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--home-bg);
+  color: var(--home-text);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.gradient_holder {
+  height: 13rem;
+  width: 100%;
+  background: #78c4ee;
+  background: linear-gradient(180deg, rgba(93, 188, 239, 0.08) 0%, rgba(10, 10, 10, 1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.holder {
+  width: min(var(--page-max), calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.home {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0;
+}
+
+.home_inner {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.hero_title {
+  margin-top: 0.25rem;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--home-text);
+  text-align: left;
+}
+
+.hero_description {
+  color: rgba(230, 237, 243, 0.72);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+  text-align: left;
+}
+
+.landing_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.landing_btn {
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid var(--home-border);
+  color: var(--home-text);
+  font-weight: 500;
+  transition: all 0.2s;
+  min-width: 11.5rem;
+  min-height: 4.25rem;
+  display: grid;
+  place-items: center;
+  gap: 0.15rem;
+  text-align: center;
+}
+
+.landing_btn:hover {
+  background-color: rgba(230, 237, 243, 0.12);
+}
+
+.landing_btn_label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.landing_btn_sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(230, 237, 243, 0.68);
+  line-height: 1.2;
+}
+
+.projects_section {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.projects_title_holder {
+  width: fit-content;
+  background-color: rgba(230, 237, 243, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 7px;
+  border-radius: 8px;
+}
+
+.projects_title {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(230, 237, 243, 0.72);
+}
+
+.project_tile_holder {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project_tile {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid var(--home-border);
+  background-color: rgba(230, 237, 243, 0.03);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--home-text);
+  transition: all 0.2s;
+}
+
+.project_tile:hover {
+  background-color: rgba(230, 237, 243, 0.06);
+  border-color: rgba(230, 237, 243, 0.2);
+}
+
+.project_tile_image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--home-surface);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.project_tile_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+  transition: transform 0.3s;
+}
+
+.project_tile:hover .project_tile_image img {
+  transform: scale(1.04);
+}
+
+.project_tile_content {
+  padding: 1rem 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.project_tile_title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--home-text);
+}
+
+.project_tile_desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--home-muted);
+  flex: 1;
+}
+
+.project_tile_tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.tech_pill {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-color: rgba(230, 237, 243, 0.08);
+  color: rgba(230, 237, 243, 0.72);
+}
+
+@media (max-width: 620px) {
+  .project_tile_holder {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .landing_links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  .landing_btn {
+    text-align: center;
+  }
+}
+

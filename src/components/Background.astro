@@ -1,17 +1,29 @@
-
-<div class="background_holder">
+<div class="background_holder" aria-hidden="true">
+  <div class="grid_overlay"></div>
 </div>
-  
-  <style>
-    .background_holder {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 0;
-        overflow: hidden;
-        pointer-events: none;
-        background-color: #0D1117;
-    }
-  </style>
+
+<style>
+  .background_holder {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background: #0A0A0A;
+    overflow: hidden;
+  }
+
+  .grid_overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(230, 237, 243, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(230, 237, 243, 0.06) 1px, transparent 1px);
+    background-size: 35px 35px;
+    animation: grid_move 10s linear infinite;
+  }
+
+  @keyframes grid_move {
+    0% { background-position: 0 0; }
+    100% { background-position: 35px 0; }
+  }
+</style>

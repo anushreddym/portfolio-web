@@ -1,61 +1,57 @@
 <header class="header">
-    <div class="header_content">
-        <nav class="nav">
-            <ul class="nav_list">
-                <li class="nav_item">
-                    <a href="" class="nav_link">Home</a>
-                </li>
-                <li class="nav_item">
-                    <a href="" class="nav_link">Projects</a>
-                </li>
-                <li class="nav_item">
-                    <a href="" class="nav_link">Blog</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+  <a href="/" class="name">Anush</a>
+    <nav class="nav">
+      <a href="/projects" class="nav_link">Projects</a>
+      <a href="/about" class="nav_link">About</a>
+      <a href="#contact" class="nav_link">Contact</a>
+    </nav>
 </header>
 
-<style>
-    .header {
-        position: absolute;
-        width: 100%;
-        z-index: 20;
-        /*background-color: red;*/
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
+<style is:global>
+  .header {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 
-    .header_content {
-        background-color: rgba(0, 0, 0, 0.3);
-        padding: 0.75rem 1rem;
-        border-radius: 10rem;
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
+  .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e6edf3;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+    transition: color 0.2s;
+  }
 
-    .nav_list {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        gap: 2rem;
-        justify-content: flex-end;
-    }
+  .name:hover {
+    color: #58a6ff;
+  }
 
-    .nav_link {
-        color: var(--border-gray, #C9D1D9);
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-    }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: auto;
+  }
 
-    .nav_link:hover {
-        color: #fff;
-    }
+  .nav_link {
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    transition: color 0.2s;
+  }
+
+  .nav_link:hover {
+    color: #e6edf3;
+  }
+
 </style>
+
