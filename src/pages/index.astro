@@ -16,6 +16,7 @@ import Background from "../components/Background.astro"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href={logoImage.src} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Anush — Portfolio</title>
   </head>
   <body>
@@ -31,6 +32,11 @@ import Background from "../components/Background.astro"
           <p class="hero_description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, nemo. Sunt quae atque corporis velit?
           </p>
+
+          <a class="resume_btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span class="resume_btn_label">Resume</span>
+          </a>
 
           <div class="landing_links">
             <a class="landing_btn" href="/projects">

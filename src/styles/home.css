@@ -76,6 +76,32 @@ body {
   text-align: left;
 }
 
+.resume_btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+  color: var(--home-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: rgba(230, 237, 243, 0.04);
+  transition: all 0.2s;
+}
+
+.resume_btn:hover {
+  background-color: rgba(230, 237, 243, 0.12);
+  border-color: rgba(230, 237, 243, 0.2);
+}
+
+.resume_btn i {
+  font-size: 0.8rem;
+  color: var(--home-accent);
+}
+
 .landing_links {
   display: flex;
   justify-content: space-between;
