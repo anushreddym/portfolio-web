@@ -17,6 +17,30 @@
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(230, 237, 243, 0.2) var(--home-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--home-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(230, 237, 243, 0.16);
+  border-radius: 8px;
+  border: 2px solid var(--home-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(230, 237, 243, 0.28);
+}
+
 body {
   min-height: 100vh;
   background: var(--home-bg);
@@ -74,6 +98,93 @@ body {
   line-height: 1.65;
   font-weight: 400;
   text-align: left;
+}
+
+.resume_btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+  color: var(--home-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: rgba(230, 237, 243, 0.04);
+  transition: all 0.2s;
+}
+
+.resume_btn:hover {
+  background-color: rgba(230, 237, 243, 0.12);
+  border-color: rgba(230, 237, 243, 0.2);
+}
+
+.resume_btn i {
+  font-size: 0.8rem;
+  color: var(--home-accent);
+}
+
+.skills_section {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.skills_title_holder {
+  width: fit-content;
+  background-color: rgba(230, 237, 243, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 7px;
+  border-radius: 8px;
+}
+
+.skills_title {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(230, 237, 243, 0.72);
+}
+
+.skill_category_holder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.skill_category_title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--home-muted);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.skill_pill_holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill_pill {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+  color: var(--home-text);
+  background-color: rgba(230, 237, 243, 0.03);
+  transition: all 0.2s;
+}
+
+.skill_pill:hover {
+  background-color: rgba(230, 237, 243, 0.12);
+  border-color: rgba(230, 237, 243, 0.2);
+  cursor: default;
 }
 
 .landing_links {

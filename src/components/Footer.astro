@@ -1,0 +1,102 @@
+<footer class="site_footer">
+  <div class="footer_inner">
+    <div class="footer_left">
+      <a href="/" class="footer_name">Anush</a>
+      <p class="footer_copyright">© 2026 Anush. All rights reserved.</p>
+    </div>
+
+    <div class="footer_social">
+      <a class="footer_social_link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a class="footer_social_link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a class="footer_social_link" href="mailto:anumuga09@gmail.com" aria-label="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style is:global>
+    .site_footer {
+        width: 100%;
+        min-height: 5.5rem;
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-top: 1px solid var(--home-border);
+    }
+
+    .footer_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .footer_name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--home-text);
+        text-decoration: none;
+        letter-spacing: -0.03em;
+        transition: color 0.2s;
+        width: fit-content;
+    }
+
+    .footer_name:hover {
+        color: var(--home-accent);
+    }
+
+    .footer_copyright {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--home-muted);
+    }
+
+    .footer_social {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .footer_social_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 8px;
+        border: 1px solid var(--home-border);
+        background-color: rgba(230, 237, 243, 0.03);
+        color: var(--home-muted);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+
+    .footer_social_link:hover {
+        background-color: rgba(230, 237, 243, 0.12);
+        border-color: rgba(230, 237, 243, 0.2);
+        color: var(--home-text);
+    }
+
+    @media (max-width: 620px) {
+        .footer_inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+    }
+</style>

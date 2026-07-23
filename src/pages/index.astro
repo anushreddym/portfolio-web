@@ -5,92 +5,144 @@ import orreryImage from "../assets/orrery.png"
 import placeholderImage from "../assets/placeholder.png"
 import LeafletMap from "../components/LeafletMap.astro"
 import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
 import Background from "../components/Background.astro"
 ---
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href={logoImage.src} />
-    <title>Anush — Portfolio</title>
-  </head>
-  <body>
-    <div class="holder">
-      <Navbar />
-      <div class="gradient_holder"></div>
-
-      <main class="home">
-        <section class="home_inner">
-          <LeafletMap />
-
-          <h1 class="hero_title">Hey, I’m Anush 👋</h1>
-          <p class="hero_description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, nemo. Sunt quae atque corporis velit?
-          </p>
-
-          <div class="landing_links">
-            <a class="landing_btn" href="/projects">
-              <span class="landing_btn_label">Projects</span>
-              <span class="landing_btn_sub">Things I’ve made</span>
-            </a>
-            <a class="landing_btn" href="/blog">
-              <span class="landing_btn_label">About</span>
-              <span class="landing_btn_sub">Learn about me</span>
-            </a>
-            <a class="landing_btn" href="#contact">
-              <span class="landing_btn_label">Contact</span>
-              <span class="landing_btn_sub">Get in touch</span>
-            </a>
-          </div>
-        </section>
-      </main>
-      
-      <div class="projects_section">
-        <div class="projects_title_holder">
-          <h1 class="projects_title">Latest projects</h1>
-        </div>
-
-        <div class="project_tile_holder">
-          <a class="project_tile" href="/projects/project-one">
-            <div class="project_tile_image">
-              <img src={placeholderImage.src} alt="Project One preview" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <link rel="icon" href={logoImage.src} />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <title>Anush — Portfolio</title>
+   </head>
+   <body>
+      <div class="holder">
+         <Navbar />
+         <div class="gradient_holder"></div>
+         <main class="home">
+            <section class="home_inner">
+               <LeafletMap />
+               <h1 class="hero_title">Hey, I’m Anush 👋</h1>
+               <p class="hero_description">
+                  Foothill High School Class of 2027. I like playing the piano and making things that sometimes work. 
+               </p>
+               <a class="resume_btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+               <i class="fa-solid fa-file-arrow-down"></i>
+               <span class="resume_btn_label">Resume</span>
+               </a>
+               <div class="landing_links">
+                  <a class="landing_btn" href="/projects">
+                  <span class="landing_btn_label">Projects</span>
+                  <span class="landing_btn_sub">Things I’ve made</span>
+                  </a>
+                  <a class="landing_btn" href="/blog">
+                  <span class="landing_btn_label">About</span>
+                  <span class="landing_btn_sub">Learn about me</span>
+                  </a>
+                  <a class="landing_btn" href="/contact">
+                  <span class="landing_btn_label">Contact</span>
+                  <span class="landing_btn_sub">Get in touch</span>
+                  </a>
+               </div>
+            </section>
+         </main>
+         <div class="skills_section">
+            <div class="skills_title_holder">
+               <h1 class="skills_title">Skills</h1>
             </div>
-            <div class="project_tile_content">
-              <h3 class="project_tile_title">Project One</h3>
-              <p class="project_tile_desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
-              </p>
-              <div class="project_tile_tech">
-                <span class="tech_pill">React</span>
-                <span class="tech_pill">Node.js</span>
-                <span class="tech_pill">PostgreSQL</span>
-              </div>
+            <div class="skill_category_holder">
+               <div class="skill_category">
+                  <h3 class="skill_category_title">Languages</h3>
+                  <div class="skill_pill_holder">
+                     <span class="skill_pill">Java</span>
+                     <span class="skill_pill">Python</span>
+                     <span class="skill_pill">C++</span>
+                     <span class="skill_pill">C#</span>
+                     <span class="skill_pill">JavaScript</span>
+                     <span class="skill_pill">TypeScript</span>
+                     <span class="skill_pill">HTML</span>
+                     <span class="skill_pill">CSS</span>
+                     <span class="skill_pill">Lua</span>
+                  </div>
+               </div>
+               <div class="skill_category">
+                  <h3 class="skill_category_title">Frameworks & Tools</h3>
+                  <div class="skill_pill_holder">
+                     <span class="skill_pill">React</span>
+                     <span class="skill_pill">Astro</span>
+                     <span class="skill_pill">Tailwind</span>
+                     <span class="skill_pill">Node.js</span>
+                     <span class="skill_pill">Supabase</span>
+                     <span class="skill_pill">Google Firebase</span>
+                     <span class="skill_pill">Git</span>
+                     <span class="skill_pill">WSL</span>
+                     <span class="skill_pill">Cloudflare</span>
+                  </div>
+               </div>
+               <div class="skill_category">
+                  <h3 class="skill_category_title">Hardware</h3>
+                  <div class="skill_pill_holder">
+                     <span class="skill_pill">Custom PCB Design</span>
+                     <span class="skill_pill">Kicad</span>
+                     <span class="skill_pill">Raspberry Pi</span>
+                     <span class="skill_pill">3D Printer Hardware</span>
+                     <span class="skill_pill">Microcontrollers</span>
+                  </div>
+               </div>
+               <div class="skill_category">
+                  <h3 class="skill_category_title">Design Software</h3>
+                  <div class="skill_pill_holder">
+                     <span class="skill_pill">Kicad</span>
+                     <span class="skill_pill">Fusion 360</span>
+                     <span class="skill_pill">Inventor</span>
+                  </div>
+               </div>
             </div>
-          </a>
-
-          <a class="project_tile" href="/projects/project-two">
-            <div class="project_tile_image">
-              <img src={placeholderImage.src} alt="Project Two preview" />
+         </div>
+         <div class="projects_section">
+            <div class="projects_title_holder">
+               <h1 class="projects_title">Latest projects</h1>
             </div>
-            <div class="project_tile_content">
-              <h3 class="project_tile_title">Project Two</h3>
-              <p class="project_tile_desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
-              </p>
-              <div class="project_tile_tech">
-                <span class="tech_pill">Astro</span>
-                <span class="tech_pill">TypeScript</span>
-                <span class="tech_pill">Leaflet</span>
-              </div>
+            <div class="project_tile_holder">
+               <a class="project_tile" href="/projects/project-one">
+                  <div class="project_tile_image">
+                     <img src={placeholderImage.src} alt="Project One preview" />
+                  </div>
+                  <div class="project_tile_content">
+                     <h3 class="project_tile_title">Project One</h3>
+                     <p class="project_tile_desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
+                     </p>
+                     <div class="project_tile_tech">
+                        <span class="tech_pill">React</span>
+                        <span class="tech_pill">Node.js</span>
+                        <span class="tech_pill">PostgreSQL</span>
+                     </div>
+                  </div>
+               </a>
+               <a class="project_tile" href="/projects/project-two">
+                  <div class="project_tile_image">
+                     <img src={placeholderImage.src} alt="Project Two preview" />
+                  </div>
+                  <div class="project_tile_content">
+                     <h3 class="project_tile_title">Project Two</h3>
+                     <p class="project_tile_desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
+                     </p>
+                     <div class="project_tile_tech">
+                        <span class="tech_pill">Astro</span>
+                        <span class="tech_pill">TypeScript</span>
+                        <span class="tech_pill">Leaflet</span>
+                     </div>
+                  </div>
+               </a>
             </div>
-          </a>
-          <footer class="test">© 2026 Anush. All rights reserved.</footer>
-        </div>
+         </div>
       </div>
-    </div>
-  </body>
+      <Footer />
+   </body>
 </html>
