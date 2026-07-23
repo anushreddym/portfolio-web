@@ -19,6 +19,26 @@
 
 html {
   scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(230, 237, 243, 0.2) var(--home-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--home-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(230, 237, 243, 0.16);
+  border-radius: 8px;
+  border: 2px solid var(--home-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(230, 237, 243, 0.28);
 }
 
 body {
