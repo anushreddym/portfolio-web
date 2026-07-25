@@ -225,3 +225,77 @@ body {
   font-size: 0.85rem;
   color: var(--home-accent);
 }
+
+.thanks {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0;
+  margin-top: 3rem;
+}
+
+.thanks_inner {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.thanks_icon_holder {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--home-border);
+  background-color: rgba(88, 166, 255, 0.08);
+  margin-bottom: 0.5rem;
+}
+
+.thanks_icon_holder i {
+  font-size: 1.25rem;
+  color: var(--home-accent);
+}
+
+.thanks_title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--home-text);
+}
+
+.thanks_description {
+  color: rgba(230, 237, 243, 0.72);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+  max-width: 26rem;
+}
+
+.thanks_btn {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+  color: var(--home-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: rgba(230, 237, 243, 0.04);
+  transition: all 0.2s;
+}
+
+.thanks_btn:hover {
+  background-color: rgba(230, 237, 243, 0.12);
+  border-color: rgba(230, 237, 243, 0.2);
+}
+
+.thanks_btn i {
+  font-size: 0.8rem;
+  color: var(--home-accent);
+}
