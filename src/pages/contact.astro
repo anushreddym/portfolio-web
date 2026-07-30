@@ -62,3 +62,33 @@ import Background from "../components/Background.astro"
       <Footer />
    </body>
 </html>
+<script>
+   const form = document.querySelector<HTMLFormElement>('.contact_form');
+
+   form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form!);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert(data.error || "Failed to send message.");
+    }
+  });
+</script>
