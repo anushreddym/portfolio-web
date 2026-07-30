@@ -1,0 +1,73 @@
+---
+import "../styles/gallery.css"
+import logoImage from "../assets/logo.png"
+import placeholderImage from "../assets/placeholder.png"
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import Background from "../components/Background.astro"
+
+const photos = [
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+  {
+    image: placeholderImage,
+  },
+]
+---
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <link rel="icon" href={logoImage.src} />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <title>Photos — Anush</title>
+   </head>
+   <body>
+      <div class="holder">
+         <Navbar />
+         <div class="gradient_holder"></div>
+         <main class="gallery_page">
+            <section class="gallery_page_header">
+               <div class="gallery_page_title_holder">
+                  <h1 class="gallery_page_title">Photos</h1>
+               </div>
+               <p class="gallery_page_desc">
+                  A few photos I've taken that I'm proud of.
+               </p>
+            </section>
+            <div class="gallery_page_grid">
+               {photos.map((photo) => (
+                  <figure class="photo_card">
+                     <div class="photo_card_image">
+                        <img src={photo.image.src}/>
+                     </div>
+                  </figure>
+               ))}
+            </div>
+         </main>
+      </div>
+      <Footer />
+   </body>
+</html>
