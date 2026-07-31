@@ -148,47 +148,81 @@ body {
   color: rgba(230, 237, 243, 0.72);
 }
 
-.skills_switcher {
-  display: flex;
-  align-items: stretch;
+.skills_accordion {
+  display: grid;
   gap: 0.75rem;
   margin-top: 1.25rem;
 }
 
-.skills_scroll_track {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  height: 9rem;
+.skills_accordion_item {
   border-radius: 12px;
   border: 1px solid var(--home-border);
   background-color: rgba(230, 237, 243, 0.03);
-  scrollbar-width: none;
+  overflow: hidden;
+  transition: all 0.2s;
 }
 
-.skills_scroll_track::-webkit-scrollbar {
+.skills_accordion_item[open] {
+  background-color: rgba(230, 237, 243, 0.05);
+  border-color: rgba(230, 237, 243, 0.18);
+}
+
+.skills_accordion_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.2s;
+}
+
+.skills_accordion_header::-webkit-details-marker {
   display: none;
 }
 
-.skills_panel {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  padding: 1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.6rem;
+.skills_accordion_header:hover {
+  background-color: rgba(230, 237, 243, 0.06);
 }
 
-.skills_panel_title {
-  font-size: 0.85rem;
+.skills_accordion_title {
+  font-size: 0.9rem;
   font-weight: 600;
+  color: var(--home-text);
+}
+
+.skills_accordion_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 1.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--home-border);
+  background-color: rgba(230, 237, 243, 0.04);
+  transition: transform 0.2s;
+}
+
+.skills_accordion_icon i {
+  font-size: 0.7rem;
   color: var(--home-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.skills_accordion_item[open] .skills_accordion_icon {
+  transform: rotate(180deg);
+  background-color: rgba(88, 166, 255, 0.12);
+  border-color: rgba(88, 166, 255, 0.3);
+}
+
+.skills_accordion_item[open] .skills_accordion_icon i {
+  color: var(--home-accent);
+}
+
+.skills_accordion_body {
+  padding: 0 1.1rem 1.1rem;
 }
 
 .skill_pill_holder {
@@ -212,45 +246,6 @@ body {
   background-color: rgba(230, 237, 243, 0.12);
   border-color: rgba(230, 237, 243, 0.2);
   cursor: default;
-}
-
-.skills_progress_rail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.skills_progress_dash {
-  width: 1.5rem;
-  padding: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.skills_progress_dash_bar {
-  width: 3px;
-  height: 1.1rem;
-  border-radius: 2px;
-  background-color: var(--home-border);
-  transition: all 0.2s;
-}
-
-.skills_progress_dash:hover .skills_progress_dash_bar {
-  background-color: rgba(230, 237, 243, 0.32);
-}
-
-.skills_progress_dash.active .skills_progress_dash_bar {
-  height: 1.6rem;
-  background-color: var(--home-accent);
-}
-
-.skills_progress_dash.active:hover .skills_progress_dash_bar {
-  background-color: var(--home-accent);
 }
 
 .landing_links {

@@ -26,160 +26,175 @@ import Background from "../components/Background.astro"
          <main class="home">
             <section class="home_inner">
                <LeafletMap />
-               <h1 class="hero_title">Hey, I’m Anush 👋</h1>
+               <h1 class="hero_title">Hey, I'm Anush 👋</h1>
                <p class="hero_description">
-                  Foothill High School Class of 2027. I like playing the piano and making things that sometimes work. 
+                  Foothill High School Class of 2027. I like playing the piano and making things that sometimes work.
                </p>
                <a class="resume_btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-               <i class="fa-solid fa-file-arrow-down"></i>
-               <span class="resume_btn_label">Resume</span>
+                  <i class="fa-solid fa-file-arrow-down"></i>
+                  <span class="resume_btn_label">Resume</span>
                </a>
                <div class="landing_links">
                   <a class="landing_btn" href="/projects">
-                  <span class="landing_btn_label">Projects</span>
-                  <span class="landing_btn_sub">Things I’ve made</span>
+                     <span class="landing_btn_label">Projects</span>
+                     <span class="landing_btn_sub">Things I've made</span>
                   </a>
                   <a class="landing_btn" href="/contact">
-                  <span class="landing_btn_label">Contact</span>
-                  <span class="landing_btn_sub">Get in touch</span>
+                     <span class="landing_btn_label">Contact</span>
+                     <span class="landing_btn_sub">Get in touch</span>
                   </a>
                   <a class="landing_btn" href="/blog">
-                  <span class="landing_btn_label">Gallery</span>
-                  <span class="landing_btn_sub">Pictures I've Taken</span>
+                     <span class="landing_btn_label">Gallery</span>
+                     <span class="landing_btn_sub">Pictures I've Taken</span>
                   </a>
                </div>
             </section>
          </main>
 
-<section class="exp_section">
-   <input type="radio" name="exp_tabs" id="exp-work" class="exp_tab_input" checked />
-   <input type="radio" name="exp_tabs" id="exp-education" class="exp_tab_input" />
+         <section class="exp_section">
+            <input type="radio" name="exp_tabs" id="exp-work" class="exp_tab_input" checked />
+            <input type="radio" name="exp_tabs" id="exp-education" class="exp_tab_input" />
 
-   <div class="exp_tabs_switch">
-      <label class="exp_tab_btn" for="exp-work">Work</label>
-      <label class="exp_tab_btn" for="exp-education">Education</label>
-   </div>
+            <div class="exp_tabs_switch">
+               <label class="exp_tab_btn" for="exp-work">Work</label>
+               <label class="exp_tab_btn" for="exp-education">Education</label>
+            </div>
 
-   <div class="exp_panel" id="exp-panel-work">
-      <div class="exp_empty">
-         <span class="exp_empty_icon">
-            <i class="fa-solid fa-briefcase"></i>
-         </span>
-         <p class="exp_empty_title">Nothing here yet</p>
-         <p class="exp_empty_desc">Someone please give me a job 🙏🙏</p>
-      </div>
-   </div>
-
-   <div class="exp_panel" id="exp-panel-education">
-      <div class="exp_entry">
-         <div class="exp_entry_marker">
-            <span class="exp_entry_logo">FHS</span>
-            <span class="exp_entry_line"></span>
-         </div>
-         <div class="exp_entry_body">
-            <div class="exp_entry_head">
-               <div>
-                  <h3 class="exp_entry_title">Foothill High School</h3>
-                  <p class="exp_entry_subtitle">High School Diploma</p>
+            <div class="exp_panel" id="exp-panel-work">
+               <div class="exp_empty">
+                  <span class="exp_empty_icon">
+                     <i class="fa-solid fa-briefcase"></i>
+                  </span>
+                  <p class="exp_empty_title">Nothing here yet</p>
+                  <p class="exp_empty_desc">Someone please give me a job 🙏🙏</p>
                </div>
-               <span class="exp_entry_date">Aug 2023 - Jun 2027</span>
             </div>
-            <ul class="exp_entry_bullets">
-               <li>Graduating next year!</li>
-            </ul>
-         </div>
-      </div>
 
-      <div class="exp_entry">
-         <div class="exp_entry_marker">
-            <span class="exp_entry_logo">CO</span>
-         </div>
-         <div class="exp_entry_body">
-            <div class="exp_entry_head">
-               <div>
-                  <h3 class="exp_entry_title">College</h3>
-                  <p class="exp_entry_subtitle">Bachelor's Degree</p>
+            <div class="exp_panel" id="exp-panel-education">
+               <div class="exp_entry">
+                  <div class="exp_entry_marker">
+                     <span class="exp_entry_logo">FHS</span>
+                     <span class="exp_entry_line"></span>
+                  </div>
+                  <div class="exp_entry_body">
+                     <div class="exp_entry_head">
+                        <div>
+                           <h3 class="exp_entry_title">Foothill High School</h3>
+                           <p class="exp_entry_subtitle">High School Diploma</p>
+                        </div>
+                        <span class="exp_entry_date">Aug 2023 - Jun 2027</span>
+                     </div>
+                     <ul class="exp_entry_bullets">
+                        <li>Graduating next year!</li>
+                     </ul>
+                  </div>
                </div>
-               <span class="exp_entry_date">August 2027 - May 2031</span>
-            </div>
-            <ul class="exp_entry_bullets">
-               <li>I haven't commited to a university yet.</li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</section>
-<div class="skills_section">
-   <div class="skills_title_holder">
-      <h1 class="skills_title">Skills</h1>
-   </div>
 
-   <div class="skills_switcher">
-      <div class="skills_scroll_track" id="skills-scroll-track">
-         <div class="skills_panel" id="skills-panel-0">
-            <h3 class="skills_panel_title">Languages</h3>
-            <div class="skill_pill_holder">
-               <span class="skill_pill">Java</span>
-               <span class="skill_pill">Python</span>
-               <span class="skill_pill">C++</span>
-               <span class="skill_pill">C#</span>
-               <span class="skill_pill">JavaScript</span>
-               <span class="skill_pill">TypeScript</span>
-               <span class="skill_pill">HTML</span>
-               <span class="skill_pill">CSS</span>
-               <span class="skill_pill">Lua</span>
+               <div class="exp_entry">
+                  <div class="exp_entry_marker">
+                     <span class="exp_entry_logo">CO</span>
+                  </div>
+                  <div class="exp_entry_body">
+                     <div class="exp_entry_head">
+                        <div>
+                           <h3 class="exp_entry_title">College</h3>
+                           <p class="exp_entry_subtitle">Bachelor's Degree</p>
+                        </div>
+                        <span class="exp_entry_date">August 2027 - May 2031</span>
+                     </div>
+                     <ul class="exp_entry_bullets">
+                        <li>I haven't commited to a university yet.</li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-         </div>
-         <div class="skills_panel" id="skills-panel-1">
-            <h3 class="skills_panel_title">Frameworks & Tools</h3>
-            <div class="skill_pill_holder">
-               <span class="skill_pill">React</span>
-               <span class="skill_pill">Astro</span>
-               <span class="skill_pill">Tailwind</span>
-               <span class="skill_pill">Node.js</span>
-               <span class="skill_pill">Supabase</span>
-               <span class="skill_pill">Google Firebase</span>
-               <span class="skill_pill">Git</span>
-               <span class="skill_pill">WSL</span>
-               <span class="skill_pill">Cloudflare</span>
-            </div>
-         </div>
-         <div class="skills_panel" id="skills-panel-2">
-            <h3 class="skills_panel_title">Hardware</h3>
-            <div class="skill_pill_holder">
-               <span class="skill_pill">Custom PCB Design</span>
-               <span class="skill_pill">Kicad</span>
-               <span class="skill_pill">Raspberry Pi</span>
-               <span class="skill_pill">3D Printer Hardware</span>
-               <span class="skill_pill">Microcontrollers</span>
-            </div>
-         </div>
-         <div class="skills_panel" id="skills-panel-3">
-            <h3 class="skills_panel_title">Design Software</h3>
-            <div class="skill_pill_holder">
-               <span class="skill_pill">Kicad</span>
-               <span class="skill_pill">Fusion 360</span>
-               <span class="skill_pill">Inventor</span>
-            </div>
-         </div>
-      </div>
+         </section>
 
-      <div class="skills_progress_rail" id="skills-progress-rail">
-         <button type="button" class="skills_progress_dash active" data-target="skills-panel-0" aria-label="Languages">
-            <span class="skills_progress_dash_bar"></span>
-         </button>
-         <button type="button" class="skills_progress_dash" data-target="skills-panel-1" aria-label="Frameworks & Tools">
-            <span class="skills_progress_dash_bar"></span>
-         </button>
-         <button type="button" class="skills_progress_dash" data-target="skills-panel-2" aria-label="Hardware">
-            <span class="skills_progress_dash_bar"></span>
-         </button>
-         <button type="button" class="skills_progress_dash" data-target="skills-panel-3" aria-label="Design Software">
-            <span class="skills_progress_dash_bar"></span>
-         </button>
-      </div>
-   </div>
-</div>
+         <div class="skills_section">
+            <div class="skills_title_holder">
+               <h1 class="skills_title">Skills</h1>
+            </div>
+
+            <div class="skills_accordion">
+               <details class="skills_accordion_item" name="skills-accordion" open>
+                  <summary class="skills_accordion_header">
+                     <span class="skills_accordion_title">Languages</span>
+                     <span class="skills_accordion_icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                     </span>
+                  </summary>
+                  <div class="skills_accordion_body">
+                     <div class="skill_pill_holder">
+                        <span class="skill_pill">Java</span>
+                        <span class="skill_pill">Python</span>
+                        <span class="skill_pill">C++</span>
+                        <span class="skill_pill">C#</span>
+                        <span class="skill_pill">JavaScript</span>
+                        <span class="skill_pill">TypeScript</span>
+                        <span class="skill_pill">HTML</span>
+                        <span class="skill_pill">CSS</span>
+                        <span class="skill_pill">Lua</span>
+                     </div>
+                  </div>
+               </details>
+
+               <details class="skills_accordion_item" name="skills-accordion">
+                  <summary class="skills_accordion_header">
+                     <span class="skills_accordion_title">Frameworks & Tools</span>
+                     <span class="skills_accordion_icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                     </span>
+                  </summary>
+                  <div class="skills_accordion_body">
+                     <div class="skill_pill_holder">
+                        <span class="skill_pill">React</span>
+                        <span class="skill_pill">Astro</span>
+                        <span class="skill_pill">Tailwind</span>
+                        <span class="skill_pill">Node.js</span>
+                        <span class="skill_pill">Supabase</span>
+                        <span class="skill_pill">Google Firebase</span>
+                        <span class="skill_pill">Git</span>
+                        <span class="skill_pill">WSL</span>
+                        <span class="skill_pill">Cloudflare</span>
+                     </div>
+                  </div>
+               </details>
+
+               <details class="skills_accordion_item" name="skills-accordion">
+                  <summary class="skills_accordion_header">
+                     <span class="skills_accordion_title">Hardware</span>
+                     <span class="skills_accordion_icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                     </span>
+                  </summary>
+                  <div class="skills_accordion_body">
+                     <div class="skill_pill_holder">
+                        <span class="skill_pill">Custom PCB Design</span>
+                        <span class="skill_pill">Kicad</span>
+                        <span class="skill_pill">Raspberry Pi</span>
+                        <span class="skill_pill">3D Printer Hardware</span>
+                        <span class="skill_pill">Microcontrollers</span>
+                     </div>
+                  </div>
+               </details>
+
+               <details class="skills_accordion_item" name="skills-accordion">
+                  <summary class="skills_accordion_header">
+                     <span class="skills_accordion_title">Design Software</span>
+                     <span class="skills_accordion_icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                     </span>
+                  </summary>
+                  <div class="skills_accordion_body">
+                     <div class="skill_pill_holder">
+                        <span class="skill_pill">Kicad</span>
+                        <span class="skill_pill">Fusion 360</span>
+                        <span class="skill_pill">Inventor</span>
+                     </div>
+                  </div>
+               </details>
+            </div>
+         </div>
 
          <div class="projects_section">
             <div class="projects_title_holder">
@@ -224,43 +239,3 @@ import Background from "../components/Background.astro"
       <Footer />
    </body>
 </html>
-
-<script>
-  const track = document.getElementById("skills-scroll-track");
-  const dashes = Array.from(
-    document.querySelectorAll<HTMLButtonElement>(".skills_progress_dash")
-  );
-  const panels = Array.from(
-    document.querySelectorAll<HTMLDivElement>(".skills_panel")
-  );
- 
-  const setActive = (index: number) => {
-    dashes.forEach((dash, i) => dash.classList.toggle("active", i === index));
-  };
- 
-  dashes.forEach((dash) => {
-    dash.addEventListener("click", () => {
-      const targetId = dash.dataset.target;
-      if (!targetId) return;
- 
-      const target = document.getElementById(targetId);
-      if (!target) return;
- 
-      target.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-    });
-  });
- 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = panels.indexOf(entry.target as HTMLDivElement);
-          setActive(index);
-        }
-      });
-    },
-    { root: track, threshold: 0.6 }
-  );
- 
-  panels.forEach((panel) => observer.observe(panel));
-</script>
