@@ -239,3 +239,19 @@ import Background from "../components/Background.astro"
       <Footer />
    </body>
 </html>
+<script>
+   // some older browswers don't support the accordion element (ios safari), this code circumvents it.
+   const accordionItems = Array.from(
+      document.querySelectorAll<HTMLDetailsElement>(".skills_accordion_item")
+   );
+
+   accordionItems.forEach((item) => {
+      item.addEventListener("toggle", () => {
+         if (!item.open) return;
+
+         accordionItems.forEach((other) => {
+            if (other !== item) other.open = false;
+         });
+      });
+   });
+</script>
