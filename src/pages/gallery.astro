@@ -5,32 +5,68 @@ import placeholderImage from "../assets/placeholder.png"
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
 import Background from "../components/Background.astro"
+import bridge from "../assets/bridge.jpeg"
+import capitol from "../assets/capitol.jpeg"
+import eiffel from "../assets/eiffel.jpeg"
+import falls from "../assets/falls.jpg"
+import lights from "../assets/lights.jpeg"
+import nyc_night from "../assets/nyc_night.jpeg"
+import nyc from "../assets/nyc.jpeg"
+import rainbow from "../assets/rainbow.jpeg"
+import square from "../assets/square.jpeg"
+import statue from "../assets/statue.jpeg"
+import switzerland from "../assets/switzerland.jpeg"
+import zurich from "../assets/zurich.jpeg"
 
 const photos = [
   {
-    image: placeholderImage,
+    image: bridge,
+    location: "Rainbow Bridge, Ontario",
   },
   {
-    image: placeholderImage,
+    image: capitol,
+    location: "Capitol Hill, Washington D.C.",
   },
   {
-    image: placeholderImage,
+    image: eiffel,
+    location: "Eiffel Tower, Paris",
   },
   {
-    image: placeholderImage,
+    image: falls,
+    location: "Rhine Falls, Switzerland",
   },
   {
-    image: placeholderImage,
+    image: lights,
+    location: "Robbinsville, New Jersey",
   },
   {
-    image: placeholderImage,
+    image: nyc_night,
+    location: "New York City, NY",
   },
   {
-    image: placeholderImage,
+    image: nyc,
+    location: "New York City, NY",
   },
   {
-    image: placeholderImage,
+    image: rainbow,
+    location: "Power Station, Niagara Falls, Ontario",
   },
+   {
+      image: square,
+      location: "Times Square, New York City, NY",
+   },
+   {
+      image: statue,
+      location: "Statue of Liberty, New York City, NY",
+   },
+   {
+      image: switzerland,
+      location: "Jungfraujoch, Switzerland",
+   },
+   {
+      image: zurich,
+      location: "Lake Zurich, Switzerland",
+   },
 ]
 ---
 <html lang="en">
@@ -42,7 +78,7 @@ const photos = [
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
       <link rel="icon" href={logoImage.src} />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      <title>Photos — Anush</title>
+      <title>Anush - Gallery</title>
    </head>
    <body>
       <div class="holder">
@@ -61,8 +97,12 @@ const photos = [
                {photos.map((photo) => (
                   <figure class="photo_card">
                      <div class="photo_card_image">
-                        <img src={photo.image.src}/>
+                        <img src={photo.image.src} alt={photo.location} />
                      </div>
+                     <figcaption class="photo_card_caption">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>{photo.location}</span>
+                     </figcaption>
                   </figure>
                ))}
             </div>

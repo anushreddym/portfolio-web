@@ -43,7 +43,7 @@ import Background from "../components/Background.astro"
                      <span class="landing_btn_label">Contact</span>
                      <span class="landing_btn_sub">Get in touch</span>
                   </a>
-                  <a class="landing_btn" href="/blog">
+                  <a class="landing_btn" href="/gallery">
                      <span class="landing_btn_label">Gallery</span>
                      <span class="landing_btn_sub">Pictures I've Taken</span>
                   </a>
@@ -222,9 +222,9 @@ import Background from "../components/Background.astro"
                      <img src={placeholderImage.src} alt="Project Two preview" />
                   </div>
                   <div class="project_tile_content">
-                     <h3 class="project_tile_title">Project Two</h3>
+                     <h3 class="project_tile_title">Project Test</h3>
                      <p class="project_tile_desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. This project is a test!
                      </p>
                      <div class="project_tile_tech">
                         <span class="tech_pill">Astro</span>
@@ -237,6 +237,7 @@ import Background from "../components/Background.astro"
          </div>
       </div>
       <Footer />
+      <div class="toast_container" id="toast-container"></div>
    </body>
 </html>
 <script>

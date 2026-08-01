@@ -128,7 +128,7 @@ body {
 
 .photo_card_image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background-color: var(--home-surface);
   border-bottom: 1px solid var(--home-border);
@@ -145,6 +145,21 @@ body {
 
 .photo_card:hover .photo_card_image img {
   transform: scale(1.04);
+}
+
+.photo_card_caption {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--home-muted);
+}
+
+.photo_card_caption i {
+  font-size: 0.7rem;
+  color: var(--home-accent);
 }
 
 @media (max-width: 480px) {
