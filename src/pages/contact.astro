@@ -63,32 +63,86 @@ import Background from "../components/Background.astro"
    </body>
 </html>
 <script>
-   const form = document.querySelector<HTMLFormElement>('.contact_form');
+  type ToastType = "sending" | "success" | "error";
 
-   form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  function getToastIcon(type: ToastType): string {
+    if (type === "sending") return '<i class="fa-solid fa-spinner fa-spin"></i>';
+    if (type === "success") return '<i class="fa-solid fa-circle-check"></i>';
+    return '<i class="fa-solid fa-circle-exclamation"></i>';
+  }
 
-      const formData = new FormData(form!);
+  function createToast(message: string, type: ToastType): HTMLDivElement | null {
+    const container = document.getElementById("toast-container");
+    if (!container) return null;
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        message: formData.get("message"),
-      }),
-    });
+    const toast = document.createElement("div");
+    toast.className = `toast toast-${type}`;
 
-    const data = await response.json();
+    const icon = document.createElement("span");
+    icon.className = "toast_icon";
+    icon.innerHTML = getToastIcon(type);
 
-    if (response.ok) {
-      alert("Message sent successfully!");
-      form.reset();
-    } else {
-      alert(data.error || "Failed to send message.");
+    const text = document.createElement("span");
+    text.className = "toast_text";
+    text.textContent = message;
+
+    toast.appendChild(icon);
+    toast.appendChild(text);
+    container.appendChild(toast);
+
+    requestAnimationFrame(() => toast.classList.add("show"));
+
+    return toast;
+  }
+
+  function updateToast(toast: HTMLDivElement, message: string, type: ToastType) {
+    toast.className = `toast toast-${type} show`;
+
+    const icon = toast.querySelector<HTMLSpanElement>(".toast_icon");
+    if (icon) icon.innerHTML = getToastIcon(type);
+
+    const text = toast.querySelector<HTMLSpanElement>(".toast_text");
+    if (text) text.textContent = message;
+  }
+
+  function removeToast(toast: HTMLDivElement) {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 250);
+  }
+
+  const form = document.querySelector<HTMLFormElement>(".contact_form");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const toast = createToast("Sending message...", "sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (toast) updateToast(toast, "Message sent successfully!", "success");
+        form.reset();
+      } else {
+        if (toast) updateToast(toast, data.error || "Failed to send message.", "error");
+      }
+    } catch {
+      if (toast) updateToast(toast, "Failed to send message.", "error");
+    }
+
+    if (toast) {
+      setTimeout(() => removeToast(toast), 4000);
     }
   });
 </script>
