@@ -5,75 +5,95 @@ import placeholderImage from "../assets/placeholder.png"
 import orreryImage from "../assets/orrery.png"
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
+import shiftAtMidnightImage from "../assets/shift_mod.png"
+import svgConverterImage from "../assets/svg-converter.png"
 import Background from "../components/Background.astro"
 
 const projects = [
-  {
-    slug: "project-one",
-    title: "2d Orbit Simulation",
-    desc: "Made in a week. Physics based 2d orbit simulation made in Godot engine.",
-    tech: ["Godot", "Gdscript", "Physics"],
-    image: orreryImage,
-    year: "2025",
-    docsUrl: null,
-    demoUrl: "https://curiosityxd.itch.io/2d-orerry",
-  },
-  {
-    slug: "project-two",
-    title: "Project Two",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    tech: ["Astro", "TypeScript", "Leaflet"],
-    image: placeholderImage,
-    year: "2025",
-    docsUrl: "#",
-    demoUrl: "#",
-  },
-  {
-    slug: "project-three",
-    title: "Project Three",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    tech: ["Python", "OpenCV", "Raspberry Pi"],
-    image: placeholderImage,
-    year: "2024",
-    docsUrl: null,
-    demoUrl: "#",
-  },
-  {
-    slug: "project-four",
-    title: "Project Four",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    tech: ["KiCad", "C++", "Microcontrollers"],
-    image: placeholderImage,
-    year: "2024",
-    docsUrl: null,
-    demoUrl: "#",
-  },
+   {
+      slug: "project-one",
+      title: "2d Orbit Simulation",
+      desc: "Made in a week. Physics based 2d orbit simulation made in Godot engine.",
+      tech: ["Godot", "Gdscript", "Physics"],
+      image: orreryImage,
+      year: "2025",
+      docsUrl: null,
+      demoUrl: "https://curiosityxd.itch.io/2d-orerry",
+      codeUrl: "https://github.com/anushreddym/Godot-2D-Orrery-Model",
+   },
+   {
+      slug: "project-two",
+      title: "SVG G-code Convertor",
+      desc: "A simple site that converts SVG files to G-code for CNC machines. Made in a week.",
+      tech: ["JavaScript", "SVG", "G-code"],
+      image: svgConverterImage,
+      year: "2026",
+      docsUrl: null,
+      demoUrl: "https://anushreddym.github.io/svg-gcode-convertor/",
+      codeUrl: "https://github.com/anushreddym/svg-gcode-convertor",
+   },
+   {
+      slug: "project-three",
+      title: "Lobby Expansion Mod",
+      desc: "A mod for Shift at Midnight that increases the maximum lobby player count. Published on thunderstore and nexus mods.",
+      tech: ["C#", "BepInEx", "Harmony Patches"],
+      image: shiftAtMidnightImage,
+      year: "2026",
+      docsUrl: null,
+      demoUrl: "https://www.nexusmods.com/shiftatmidnight/mods/6",
+      codeUrl: "https://github.com/anushreddym/MoreShiftAtMidnightPlayers",
+   },
+   {
+      slug: "project-four",
+      title: "Project Four",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      tech: ["KiCad", "C++", "Microcontrollers"],
+      image: placeholderImage,
+      year: "2024",
+      docsUrl: null,
+      demoUrl: "#",
+      codeUrl: null,
+   },
 ]
 ---
+
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+         rel="stylesheet"
+      />
       <link rel="icon" href={logoImage.src} />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
       <title>Anush - Projects</title>
    </head>
+
    <body>
       <div class="holder">
          <Navbar />
+
          <div class="gradient_holder"></div>
+
          <main class="projects_page">
             <section class="projects_page_header">
                <div class="projects_page_title_holder">
                   <h1 class="projects_page_title">Projects</h1>
                </div>
+
                <p class="projects_page_desc">
-                  Here are some the things I've made over the last few years. Click on any of them to view a full write up/demo of the project.
+                  Here are some the things I've made over the last few years.
+                  Click on any of them to view a full write up/demo of the
+                  project.
                </p>
             </section>
+
             <div class="projects_page_grid">
                {projects.map((project) => (
                   <div class="project_card">
@@ -81,21 +101,34 @@ const projects = [
                         class="project_card_stretched"
                         href={project.demoUrl}
                         aria-label={`View demo of ${project.title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                      ></a>
+
                      <div class="project_card_image">
-                        <img src={project.image.src} alt={`${project.title} preview`} />
+                        <img
+                           src={project.image.src}
+                           alt={`${project.title} preview`}
+                        />
+
                         {project.year && (
-                           <span class="project_card_year">{project.year}</span>
+                           <span class="project_card_year">
+                              {project.year}
+                           </span>
                         )}
                      </div>
+
                      <div class="project_card_content">
                         <h3 class="project_card_title">{project.title}</h3>
+
                         <p class="project_card_desc">{project.desc}</p>
+
                         <div class="project_card_tech">
                            {project.tech.map((tech) => (
                               <span class="tech_pill">{tech}</span>
                            ))}
                         </div>
+
                         <div class="project_card_actions">
                            {project.docsUrl && (
                               <a
@@ -108,15 +141,30 @@ const projects = [
                                  <span>Docs</span>
                               </a>
                            )}
-                           <a
-                              class="project_card_action project_card_action_primary"
-                              href={project.demoUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                           >
-                              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                              <span>Demo</span>
-                           </a>
+
+                           {project.codeUrl && (
+                              <a
+                                 class="project_card_action"
+                                 href={project.codeUrl}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                              >
+                                 <i class="fa-brands fa-github"></i>
+                                 <span>Source</span>
+                              </a>
+                           )}
+
+                           {project.demoUrl && (
+                              <a
+                                 class="project_card_action project_card_action_primary"
+                                 href={project.demoUrl}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                              >
+                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                 <span>Demo</span>
+                              </a>
+                           )}
                         </div>
                      </div>
                   </div>
@@ -124,6 +172,7 @@ const projects = [
             </div>
          </main>
       </div>
+
       <Footer />
    </body>
 </html>
