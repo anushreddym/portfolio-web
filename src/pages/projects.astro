@@ -8,6 +8,7 @@ import Footer from "../components/Footer.astro"
 import shiftAtMidnightImage from "../assets/shift_mod.png"
 import svgConverterImage from "../assets/converter-pic.png"
 import flowImage from "../assets/flowimage.png"
+import portfolioImage from "../assets/portfolio.png"
 import Background from "../components/Background.astro"
 
 const projects = [
@@ -36,7 +37,7 @@ const projects = [
    {
       slug: "project-three",
       title: "Lobby Expansion Mod",
-      desc: "A mod for Shift at Midnight that increases the maximum lobby player count. Published on thunderstore and nexus mods.",
+      desc: "A mod for Shift at Midnight that increases the maximum lobby player count.",
       tech: ["C#", "BepInEx", "Harmony Patches"],
       image: shiftAtMidnightImage,
       year: "2026",
@@ -47,7 +48,7 @@ const projects = [
    {
       slug: "project-four",
       title: "Java Flow Puzzle",
-      desc: "A logic puzzle game built for my APCSA final project. Connect colored nodes without crossing. Built in 2 months using solely Java.",
+      desc: "A logic puzzle game built for my APCSA final project. Built in 2 months using Java.",
       tech: ["Java", "Swing", "AWT"],
       image: flowImage,
       year: "2024",
@@ -55,6 +56,17 @@ const projects = [
       demoUrl: "https://github.com/anushreddym/flow-puzzle/releases/tag/java",
       codeUrl: "https://github.com/anushreddym/flow-puzzle",
    },
+   {
+      slug: "project-five",
+      title: "Portfolio",
+      desc: "This website! Built using Astro and hosted on Firebase with Discord webhook integration.",
+      tech: ["Astro", "Firebase", "Webhook API"],
+      image: portfolioImage,
+      year: null,
+      docsUrl: null,
+      demoUrl: "https://anushmudiganti.xyz",
+      codeUrl: "https://github.com/anushreddym/portfolio-web",
+   }
 ]
 ---
 
