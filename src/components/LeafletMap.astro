@@ -6,6 +6,7 @@ const {
 } = Astro.props;
 
 const id = `leaflet-${Math.random().toString(36).slice(2)}`;
+const cartoApiKey = import.meta.env.PUBLIC_CARTO_API_KEY ?? "";
 ---
 
 <div class={`leaflet_wrap ${className}`}>
@@ -92,7 +93,7 @@ const id = `leaflet-${Math.random().toString(36).slice(2)}`;
   href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 />
 
-<script define:vars={{ id }}>
+<script define:vars={{ id, cartoApiKey }}>
   const el = document.getElementById(id);
   const timeEl = el?.parentElement?.querySelector(".leaflet_time");
 
@@ -125,6 +126,12 @@ const id = `leaflet-${Math.random().toString(36).slice(2)}`;
         const lng = Number(el.dataset.centerLng);
         const zoom = Number(el.dataset.zoom);
 
+        if (!cartoApiKey) {
+          console.warn(
+            "[LeafletMap] PUBLIC_CARTO_API_KEY is missing — set it in .env"
+          );
+        }
+
         const map = L.map(el, {
           center: [lat, lng],
           zoom,
@@ -139,11 +146,14 @@ const id = `leaflet-${Math.random().toString(36).slice(2)}`;
           touchZoom: false,
         });
 
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-          maxZoom: 15,
-          subdomains: "abcd",
-          attribution: "",
-        }).addTo(map);
+        L.tileLayer(
+          `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${encodeURIComponent(cartoApiKey)}`,
+          {
+            maxZoom: 15,
+            subdomains: "abcd",
+            attribution: "",
+          }
+        ).addTo(map);
 
         L.circleMarker([lat, lng], {
           radius: 6,
