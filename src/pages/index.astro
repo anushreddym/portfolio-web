@@ -1,12 +1,11 @@
 ---
 import "../styles/home.css"
 import logoImage from "../assets/logo.png"
-import orreryImage from "../assets/orrery.png"
-import placeholderImage from "../assets/placeholder.png"
+import svgConverterImage from "../assets/converter-pic.png"
+import shiftAtMidnightImage from "../assets/shift_mod.png"
 import LeafletMap from "../components/LeafletMap.astro"
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
-import Background from "../components/Background.astro"
 ---
 <html lang="en">
    <head>
@@ -201,39 +200,53 @@ import Background from "../components/Background.astro"
                <h1 class="projects_title">Latest projects</h1>
             </div>
             <div class="project_tile_holder">
-               <a class="project_tile" href="/projects/project-one">
+               <a
+                  class="project_tile"
+                  href="https://anushreddym.github.io/svg-gcode-convertor/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
                   <div class="project_tile_image">
-                     <img src={placeholderImage.src} alt="Project One preview" />
+                     <img src={svgConverterImage.src} alt="SVG G-code Convertor preview" />
                   </div>
                   <div class="project_tile_content">
-                     <h3 class="project_tile_title">Project One</h3>
+                     <h3 class="project_tile_title">SVG G-code Convertor</h3>
                      <p class="project_tile_desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description of what this project does and why it matters.
+                        A simple site that converts SVG files to G-code for CNC machines. Made in a week.
                      </p>
                      <div class="project_tile_tech">
-                        <span class="tech_pill">React</span>
-                        <span class="tech_pill">Node.js</span>
-                        <span class="tech_pill">PostgreSQL</span>
+                        <span class="tech_pill">JavaScript</span>
+                        <span class="tech_pill">SVG</span>
+                        <span class="tech_pill">G-code</span>
                      </div>
                   </div>
                </a>
-               <a class="project_tile" href="/projects/project-two">
+               <a
+                  class="project_tile"
+                  href="https://thunderstore.io/c/shift-at-midnight/p/Decahedron_Studios/MoreShiftAtMidnightPlayers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
                   <div class="project_tile_image">
-                     <img src={placeholderImage.src} alt="Project Two preview" />
+                     <img src={shiftAtMidnightImage.src} alt="Lobby Expansion Mod preview" />
                   </div>
                   <div class="project_tile_content">
-                     <h3 class="project_tile_title">Project Test</h3>
+                     <h3 class="project_tile_title">Lobby Expansion Mod</h3>
                      <p class="project_tile_desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. This project is a test!
+                        A mod for Shift at Midnight that increases the maximum lobby player count.
                      </p>
                      <div class="project_tile_tech">
-                        <span class="tech_pill">Astro</span>
-                        <span class="tech_pill">TypeScript</span>
-                        <span class="tech_pill">Leaflet</span>
+                        <span class="tech_pill">C#</span>
+                        <span class="tech_pill">BepInEx</span>
+                        <span class="tech_pill">Harmony Patches</span>
                      </div>
                   </div>
                </a>
             </div>
+            <a class="projects_more_link" href="/projects">
+               <span>Want to see more?</span>
+               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
          </div>
       </div>
       <Footer />
