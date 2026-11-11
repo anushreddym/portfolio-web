@@ -1,7 +1,7 @@
 ---
 const {
-  center = [37.6595, -121.8752], // [lat, lng] San Francisco
-  zoom = 14,
+  center = [37.6595, -121.8752], // [lat, lng] Pleasanton, CA
+  zoom = 12,
   class: className = "",
 } = Astro.props;
 
@@ -55,7 +55,6 @@ const cartoApiKey = import.meta.env.PUBLIC_CARTO_API_KEY ?? "";
   .leaflet-container {
     background: #000000 !important;
     border-radius: inherit;
-    image-rendering: pixelated;
   }
 
   .leaflet-pane,
@@ -66,7 +65,6 @@ const cartoApiKey = import.meta.env.PUBLIC_CARTO_API_KEY ?? "";
 
   .leaflet-tile {
     background-color: #000000;
-    image-rendering: pixelated;
   }
 
   .leaflet-control-attribution {
